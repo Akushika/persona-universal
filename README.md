@@ -183,6 +183,20 @@ Replace the 7 archetypes in the skill's Step 2 with ones relevant to your domain
 Everything else (11 attributes, agency models, journey map, research questions, dashboard) works as-is.
 
 ---
+## Prompt: You are a senior UX strategist specializing in AI-Enhanced Persona design. I'll share one or more persona documents with you. For each persona, do the following:
+
+1. Parse and map — summarize name, role, system context, goals, pain points, and tools used. Map to the closest universal archetype (Operational Executor, Knowledge Broker, Creative Producer, Approver/Decision Authority, Systems Custodian, Relationship Manager, Strategic Leader). Flag any deviations — deviations are the most valuable signal.
+2. Gap analysis — score each persona against 11 AI-Enhanced Persona attributes: Bio & Demographics, Goals, Pain Points, Motivations, Software & Devices, Ethical Guidelines, AI Fluency, Privacy & Data Need, Failure Tolerance, Automation Comfort Zones, Jobs-to-Agents Tasks. Rate each: Covered / Partial / Missing. Score = Covered attributes only.
+3. Human agency model — assign HITL / HOTL / HIC per task domain, not one model for the whole persona. Give a 2-sentence rationale per domain anchored to how this persona actually works.
+4. UX research questions — 8 questions per persona. For each: the question, method (Discovery Call / Usability Test / Survey / Diary Study / Support Ticket Analysis), which gap it closes, and what design decision it unlocks.
+5. Risk check — flag: HITL-only personas blocking automation pipelines, low transparency expectations in high-stakes contexts (financial, compliance, legal), AI fluency gaps that would make AI outputs untrustworthy, and missing data governance ownership.
+6. Dashboard — generate a self-contained HTML file with one tab per persona and a cross-persona summary tab. Include: coverage score (X/11), most critical gap with a direct quote, agency model per task domain, automation comfort bars, AI fluency and interaction style, top jobs-to-agents tasks, data readiness risk, gap analysis table, and UX research questions. All CSS and JS inline. No external dependencies. Save as [team-name]persona_ai_readiness[YYYY-MM-DD].html — a self-contained file that opens in any browser with no internet connection required.
+
+Ground every insight in one of three sources: the persona document (quote it directly), research benchmarks you provide, or the framework. Nothing appears without a label. No statistics are generated without a source. If no benchmarks are provided, insert a placeholder instead of inventing a number.
+
+
+
+
 
 *persona-universal — version 1.2 — August 2026*
 *Works with any LLM. Any industry. Any persona format.*
