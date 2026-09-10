@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Lens | Persona Dashboard</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#002112",
+                    "on-surface-variant": "#424752",
+                    "tertiary-fixed": "#7bfabb",
+                    "surface": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c21",
+                    "primary-container": "#005fb8",
+                    "tertiary-fixed-dim": "#5ddda1",
+                    "surface-container": "#ecedf6",
+                    "inverse-on-surface": "#eff0f8",
+                    "on-primary-container": "#cadcff",
+                    "surface-container-highest": "#e1e2ea",
+                    "on-background": "#191c21",
+                    "secondary-container": "#d4e0fc",
+                    "primary": "#00488d",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001b3d",
+                    "on-secondary-fixed": "#0f1c30",
+                    "surface-container-low": "#f2f3fb",
+                    "primary-fixed-dim": "#a8c8ff",
+                    "surface-dim": "#d8dae2",
+                    "on-primary-fixed-variant": "#00468b",
+                    "on-secondary-fixed-variant": "#3b475e",
+                    "surface-tint": "#005db5",
+                    "background": "#f9f9ff",
+                    "inverse-primary": "#a8c8ff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e7e8f0",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#bac7e2",
+                    "inverse-surface": "#2e3036",
+                    "tertiary-container": "#006e47",
+                    "secondary": "#535f77",
+                    "on-tertiary-container": "#73f2b4",
+                    "outline": "#727783",
+                    "surface-variant": "#e1e2ea",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "outline-variant": "#c2c6d4",
+                    "on-secondary-container": "#57637b",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#005335",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col bg-slate-100 dark:bg-slate-900 h-screen w-72 flex-shrink-0">
+<div class="p-8 flex flex-col h-full">
+<div class="mb-10">
+<span class="text-lg font-bold tracking-tight text-blue-900 dark:text-blue-100">The Executive Lens</span>
+<p class="text-xs text-on-surface-variant mt-1">Strategic Curator</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-blue-900 dark:text-blue-300 font-bold border-r-4 border-blue-800 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Curated Insights</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard_customize">dashboard_customize</span>
+<span>Portfolio Health</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span>Market Dynamics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span>Strategic Initiatives</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Executive Archive</span>
+</a>
+</nav>
+<button class="mb-8 w-full py-3 px-4 bg-primary text-on-primary rounded-full font-semibold flex items-center justify-center gap-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New Initiative</span>
+</button>
+<div class="pt-6 mt-auto border-t border-slate-200/50 dark:border-slate-800/50 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-8 h-16 ml-72 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl transition-all duration-300">
+<div class="flex items-center bg-surface-container-high px-4 py-2 rounded-full w-96">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm ml-2 w-full text-on-surface" placeholder="Search curated intelligence..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="Alex Executive Profile" data-alt="professional headshot of an executive with a focused and confident expression in a high-end corporate setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfA_XnkFhui_TqHDScSMFfMfUiRUnQnCjN5M8yVg9vgXH6oCYpUfrd6KtYvpUpwBNEFaMh3241g7Mt1lxHDievDH5YY-4UScracvddlhxT-za582emBGJeYCAQwAw-w0YofepM3bOBFgG6GvrIHa-WqtnyQY3DWTCYRb8dXNgBnC3yC1kVzWFQ7Kykjd4N5ILU1BIIAzjj8BkYhC4zBW3uPehVZynVEJM0a9HaeVtXDlxlbKt_Wlc8-JBg2UzQVGKWcYQxmkmRznVn"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 p-10 space-y-12">
+<!-- Header & Persona Selector Dropdown -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="text-label-md text-primary font-bold uppercase tracking-widest mb-2 block">Curated Intelligence</span>
+<h1 class="text-display-sm text-on-surface font-extrabold leading-tight">Persona Executive Lens</h1>
+</div>
+<div class="relative w-full md:w-80">
+<label class="sr-only" for="persona-selector">Select Persona</label>
+<div class="relative">
+<select class="appearance-none w-full bg-surface-container-low border-none rounded-full px-6 py-3.5 pr-12 text-sm font-semibold text-primary focus:ring-2 focus:ring-primary/20 cursor-pointer shadow-sm" id="persona-selector">
+<option selected="">Alex - The Insight Manager</option>
+<option>The Reluctant Adopter</option>
+<option>The Power User</option>
+<option>The Strategic Visionary</option>
+<option>The Data Gatekeeper</option>
+<option>The Compliance Officer</option>
+<option>The Scale Enthusiast</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Persona Profile & Strategic Impact -->
+<section class="grid grid-cols-12 gap-8">
+<!-- Persona Profile: Asymmetric Large Card -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl p-8 transition-all hover:bg-white border border-transparent hover:border-outline-variant/10">
+<div class="flex flex-col md:flex-row gap-10">
+<div class="w-full md:w-1/3 space-y-6">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary to-primary-container rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<img alt="Alex - The Insight Manager Profile" class="relative rounded-xl w-full h-64 object-cover" data-alt="a professional executive in a minimal modern office looking at data screens with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVS2K1V09tukhPW5svHlayS4wOdiFR7seJNpqVZKCnVjWBXMZNh0RhdUKGcVUy3VYb4JV2ESxR8YsHarlfCQHIqn9mLn-fZrqdUMQKhiUzSuR_zK61yn9arJz84eO7s76oFgkaRwujFFxx_K0IlP1SuT--n7NTE8ql4mSBn_LuFXvYKLtuUvWdWl_Cfn_zLx6bnromFfRG0-5I92bZUiJ1WWrmsg0mcjE31OOvu2YtQzE2E4T5rtpF98pQgVC82JTSVhzEkG0m1W7s"/>
+</div>
+<div class="space-y-1">
+<h2 class="text-headline-sm text-on-surface font-bold">Alex Chen</h2>
+<p class="text-body-md text-on-surface-variant font-medium">Head of Operations, FinTech Global</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] uppercase font-bold rounded-full tracking-wider">High Influence</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] uppercase font-bold rounded-full tracking-wider">Critical Persona</span>
+</div>
+</div>
+<div class="flex-1 space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-4">
+<h3 class="text-title-md text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span> Daily Tasks
+                            </h3>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li>• Curate quarterly risk reports</li>
+<li>• Approve cross-functional budgets</li>
+<li>• Synthesis of user feedback loops</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-title-md text-error font-bold flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="warning">warning</span> Pain Points
+                            </h3>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li>• Data fragmentation across silos</li>
+<li>• Slow latency in executive dashboards</li>
+<li>• Lack of "Why" behind metrics</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-title-md text-tertiary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="flag">flag</span> Core Goals
+                            </h3>
+<p class="text-body-md text-on-surface-variant">To achieve total operational transparency and reduce churn by 12% through insight-driven strategy.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-title-md text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span> Specific Needs
+                            </h3>
+<p class="text-body-md text-on-surface-variant">Requires high-level narrative summaries followed by deep-dive drill-down capabilities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Strategic Impact: Narrow Sidebar Card -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-low rounded-xl p-8 space-y-10">
+<h2 class="text-headline-sm text-on-surface font-bold">Strategic Impact</h2>
+<div class="space-y-8">
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/5">
+<p class="text-label-md text-on-surface-variant font-medium mb-1">Projected Revenue Impact</p>
+<div class="flex items-end gap-2">
+<span class="text-display-sm text-primary font-extrabold leading-none">$2.4M</span>
+<span class="text-tertiary text-sm font-bold flex items-center gap-0.5 pb-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                            8.2%
+                        </span>
+</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/5">
+<p class="text-label-md text-on-surface-variant font-medium mb-3">Churn Risk Index</p>
+<div class="h-2 w-full bg-secondary-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-tertiary-fixed w-[24%]"></div>
+</div>
+<div class="flex justify-between mt-3">
+<span class="text-label-md text-on-surface font-bold">Low Risk (24%)</span>
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<h4 class="text-title-md text-on-surface font-bold">Market Sentiment</h4>
+<p class="text-body-md text-on-surface-variant italic">"Alex represents 65% of our high-value enterprise accounts. Optimizing for this persona secures our core market position."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- NEW SECTION: Customer Journey Mapping -->
+<section class="space-y-8">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-sm text-on-surface font-bold">Customer Journey Engagement</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full">ACTIVE MAPPING</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Awareness -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="flex items-center gap-3 mb-4">
+<span class="p-2 bg-primary-container text-on-primary-container rounded-lg material-symbols-outlined" data-icon="visibility">visibility</span>
+<h4 class="text-title-sm font-bold">Awareness</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Discovers through industry whitepapers and LinkedIn thought leadership. Primarily seeks validation of efficiency gains.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold text-primary uppercase">Touchpoint</span>
+<p class="text-xs font-medium mt-1">SEO / Industry Reports</p>
+</div>
+</div>
+<!-- Onboarding -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="flex items-center gap-3 mb-4">
+<span class="p-2 bg-secondary-container text-on-secondary-container rounded-lg material-symbols-outlined" data-icon="login">login</span>
+<h4 class="text-title-sm font-bold">Onboarding</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Wants 'Time-to-Value' within 48 hours. Values self-serve documentation over discovery calls.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold text-primary uppercase">Touchpoint</span>
+<p class="text-xs font-medium mt-1">Guided Dashboard Tour</p>
+</div>
+</div>
+<!-- Engagement -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-primary/40 shadow-md ring-1 ring-primary/10 scale-[1.02] relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full">CURRENT FOCUS</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="p-2 bg-primary text-on-primary rounded-lg material-symbols-outlined" data-icon="star_rate">star_rate</span>
+<h4 class="text-title-sm font-bold">Engagement</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Daily active use of report generation. Deep engagement with automated synthesis and budget tracking tools.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold text-primary uppercase">Touchpoint</span>
+<p class="text-xs font-medium mt-1">Weekly Digest Email</p>
+</div>
+</div>
+<!-- Advocacy -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="flex items-center gap-3 mb-4">
+<span class="p-2 bg-tertiary-container text-on-tertiary-container rounded-lg material-symbols-outlined" data-icon="campaign">campaign</span>
+<h4 class="text-title-sm font-bold">Advocacy</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">High likelihood to refer peers if ROI dashboard is shareable. Responds well to 'Early Access' invitations.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<span class="text-[10px] font-bold text-primary uppercase">Touchpoint</span>
+<p class="text-xs font-medium mt-1">Executive Advisory Board</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Evolution Tracker & Actionable Highlights -->
+<section class="grid grid-cols-12 gap-8">
+<!-- Evolution Tracker -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-low rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-headline-sm text-on-surface font-bold">Evolution Tracker</h2>
+<span class="text-label-md text-primary font-bold">Last 6 Months</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+</div>
+<div>
+<p class="text-on-surface font-bold text-sm">Shift in Data Sovereignty</p>
+<p class="text-body-md text-on-surface-variant mt-1 text-xs">Alex has moved from manual extraction to demanding automated narrative summaries.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="mood">mood</span>
+</div>
+<div>
+<p class="text-on-surface font-bold text-sm">Sentiment Stabilization</p>
+<p class="text-body-md text-on-surface-variant mt-1 text-xs">Trust levels in AI-generated insights increased by 30% YoY.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="hub">hub</span>
+</div>
+<div>
+<p class="text-on-surface font-bold text-sm">Connectivity Preference</p>
+<p class="text-body-md text-on-surface-variant mt-1 text-xs">Increased focus on Slack/Teams integration over native dashboard logins.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Actionable Highlights: Bento Variant -->
+<div class="col-span-12 md:col-span-7 space-y-8">
+<div class="flex justify-between items-center">
+<h2 class="text-headline-sm text-on-surface font-bold">Actionable Highlights</h2>
+<button class="text-sm font-semibold text-primary flex items-center gap-1 hover:underline">
+                    View All Recommendations <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm space-y-4">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-secondary-container text-on-secondary-container rounded-lg material-symbols-outlined" data-icon="mail">mail</span>
+<span class="px-3 py-1 bg-tertiary-fixed-dim/20 text-tertiary text-[10px] font-bold rounded-full">HIGH IMPACT</span>
+</div>
+<h4 class="text-title-md text-on-surface font-bold">Automated Weekly Synthesis</h4>
+<p class="text-body-md text-on-surface-variant">Implement a Monday-morning 'Executive Digest' delivered directly to inbox with top 3 focus areas.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm space-y-4">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-secondary-container text-on-secondary-container rounded-lg material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold rounded-full">MEDIUM</span>
+</div>
+<h4 class="text-title-md text-on-surface font-bold">Contextual AI Chatbot</h4>
+<p class="text-body-md text-on-surface-variant">Deploy an LLM-backed interface for natural language querying of quarterly data sets.</p>
+</div>
+<div class="bg-primary p-6 rounded-xl shadow-lg shadow-primary/20 space-y-4 group transition-transform hover:scale-[1.02]">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-primary-container text-on-primary-container rounded-lg material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<h4 class="text-title-md text-on-primary font-bold">The Export Priority</h4>
+<p class="text-on-primary/80 text-sm">Alex needs one-click PDF generation for board meetings. Ensure 'Export Portfolio' is center stage.</p>
+<button class="w-full mt-2 py-2 bg-white text-primary rounded-full text-xs font-bold transition-colors hover:bg-inverse-on-surface">Optimize Export Flow</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm flex flex-col justify-center items-center text-center space-y-4 border-dashed border-2">
+<span class="material-symbols-outlined text-outline-variant text-4xl" data-icon="add_circle">add_circle</span>
+<p class="text-sm font-medium text-on-surface-variant">Add Custom Action Recommendation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Insight Sourcing & Footer -->
+<footer class="pt-12 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="space-y-4 max-w-2xl">
+<h3 class="text-title-md text-on-surface font-bold">Insight Sourcing</h3>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="interpreter_mode">interpreter_mode</span>
+<span class="text-label-md text-on-surface-variant font-medium">12 User Interviews</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="confirmation_number">confirmation_number</span>
+<span class="text-label-md text-on-surface-variant font-medium">450+ Support Tickets</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="query_stats">query_stats</span>
+<span class="text-label-md text-on-surface-variant font-medium">Platform Usage Analytics</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="forum">forum</span>
+<span class="text-label-md text-on-surface-variant font-medium">CSAT Survey Responses</span>
+</div>
+</div>
+</div>
+<button class="group flex items-center gap-3 bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+            Download Persona Report
+        </button>
+</footer>
+</main>
+</body></html>
